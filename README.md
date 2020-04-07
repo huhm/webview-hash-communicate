@@ -23,4 +23,4 @@ WebViewHashPushChannel.getInstance().once(CHANNEL_EVENT_TYPE.PAY, (res: {
 })
 ```
 
-微信小程序使用方式（见test/weapp/H5Webview.jsx）
+微信小程序使用方式（见test/weapp/H5Webview.jsx）,示例使用Taro写的微信小程序，可以使用原生方式

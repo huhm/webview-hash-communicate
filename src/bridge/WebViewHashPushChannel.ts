@@ -1,7 +1,7 @@
 import { unpackUrlSearch } from "../core/UrlHelper";
 import Event from "../core/Event"; 
 
-const HASH_EVENT_TAG = '_isweapppush';
+const HASH_EVENT_TAG = '_iswebviewpush';
 /**
  * 和webview的hash通信工具类
  * 注: 进行跳转前一定要先初始化
