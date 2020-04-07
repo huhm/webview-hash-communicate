@@ -1,6 +1,6 @@
 import Taro from "@tarojs/taro";
 import { WebView } from "@tarojs/components";
-import { getCurrentChannelEventHash, resetChannelHash } from './WebviewHashChannelData';
+import { getCurrentChannelEventHash, resetChannelHash } from './WebViewHashChannelData';
 import { unpackUrl } from '../../src/core/UrlHelper';
 
 const DEFAULT_WEB_PATH = 'https://xxx.x.com/xxx';// to 参数默认的域名前缀

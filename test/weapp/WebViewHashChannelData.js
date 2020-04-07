@@ -1,6 +1,6 @@
 
 
-import { packUrlSearch } from "./url";
+import { packUrlSearch } from "../../src/core/UrlHelper";
 import CHANNEL_EVENT_TYPE from '../constant/CHANNEL_EVENT_TYPE';
 //'?_iswebviewpush=时间戳&type=类型&其他参数&_t=xxx'
 
@@ -10,10 +10,12 @@ let channelEventHash = CHANNEL_EVENT_NONE;
 
 
 function convertChannelEventHash(data) {
-    return packUrlSearch({
-        ...data,
-        _iswebviewpush:new Date().getTime()
-    });
+    // 保证_iswebviewpush位置,可以附加到原来的#xxx上
+    return  `?_iswebviewpush=${new Date().getTime()}&`+packUrlSearch(data,'');
+    // return packUrlSearch({
+    //     ...data,
+    //     _iswebviewpush:new Date().getTime()
+    // });
 }
 
 function setChannelEventHash(data) {
