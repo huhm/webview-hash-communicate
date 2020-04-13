@@ -77,6 +77,7 @@ export default class H5WebView extends Taro.Component {
       if (item && item.type === type) {
         return item
       }
+      lastIdx--;
     }
   }
   handleMessage(e) {
